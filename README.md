@@ -20,7 +20,7 @@ npm install
 ### Start a local devnet for testing and development
 
 ```
-npx @alephium/cli@latest devnet start
+cd docker && docker compose up -d
 ```
 
 ### Deploy the token faucet contract
@@ -30,8 +30,7 @@ npx @alephium/cli@latest devnet start
 npx @alephium/cli deploy -n devnet
 ```
 
-This will compile and deploy the token faucet contracts to all of the
-4 groups on devnet.
+This will compile and deploy the token faucet contracts to group 0 on devnet.
 
 Before deployment, you might want to just compile and test the
 contracts first:
