@@ -81,6 +81,10 @@ class Factory extends ContractFactory<
   TokenFaucetInstance,
   TokenFaucetTypes.Fields
 > {
+  getInitialFieldsWithDefaultValues() {
+    return this.contract.getInitialFieldsWithDefaultValues() as TokenFaucetTypes.Fields;
+  }
+
   eventIndex = { Withdraw: 0 };
   consts = { ErrorCodes: { InvalidWithdrawAmount: BigInt(0) } };
 
