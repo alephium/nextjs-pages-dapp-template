@@ -20,17 +20,17 @@ export function ConnectModal() {
         setOpened(false)
       })
     }
-  }, [connectClicked, opened])
+  }, [connectClicked, opened, setConnectClicked, connect, setOpened, setAccount])
 
   const onConnect = useCallback((id: 'injected' | 'walletConnect') => {
     context.setConnectorId(id)
     setConnectClicked(true)
-  }, [])
+  }, [context, setConnectClicked])
 
   const onDisconnect = useCallback(async () => {
     await disconnect()
     setAccount(undefined)
-  }, [disconnect])
+  }, [disconnect, setAccount])
 
   return (
     <div>
