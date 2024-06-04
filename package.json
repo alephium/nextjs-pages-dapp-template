@@ -30,8 +30,8 @@
     "trailingComma": "none"
   },
   "dependencies": {
-    "@alephium/web3": "v0.41.0",
-    "@alephium/web3-react": "v0.41.0",
+    "@alephium/web3": "v0.42.0",
+    "@alephium/web3-react": "v0.42.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.19",
@@ -48,8 +48,8 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@alephium/cli": "v0.41.0",
-    "@alephium/web3-test": "v0.41.0",
+    "@alephium/cli": "v0.42.0",
+    "@alephium/web3-test": "v0.42.0",
     "@types/jest": "^27.5.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
