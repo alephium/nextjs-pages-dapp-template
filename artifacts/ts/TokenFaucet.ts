@@ -25,6 +25,8 @@ import {
   getContractEventsCurrentCount,
   TestContractParamsWithoutMaps,
   TestContractResultWithoutMaps,
+  addStdIdToFields,
+  encodeContractFields,
 } from "@alephium/web3";
 import { default as TokenFaucetContractJson } from "../TokenFaucet.ral.json";
 import { getContractByCodeHash } from "./contracts";
@@ -83,6 +85,14 @@ class Factory extends ContractFactory<
   TokenFaucetInstance,
   TokenFaucetTypes.Fields
 > {
+  encodeFields(fields: TokenFaucetTypes.Fields) {
+    return encodeContractFields(
+      addStdIdToFields(this.contract, fields),
+      this.contract.fieldsSig,
+      []
+    );
+  }
+
   getInitialFieldsWithDefaultValues() {
     return this.contract.getInitialFieldsWithDefaultValues() as TokenFaucetTypes.Fields;
   }
@@ -150,8 +160,9 @@ class Factory extends ContractFactory<
 export const TokenFaucet = new Factory(
   Contract.fromJson(
     TokenFaucetContractJson,
-    "=20-2+67=101+3a0007e02=1+75468652063757272656e742062616c616e63652069732000=46",
-    "a3309aa3a0dbd0c53b67a0c422316dcbc0571d8fa5f9ea2ab374b5c110f4efe2"
+    "=20-2+71=111-1+4=10+a0007e02175468652063757272656e742062616c616e63652069732000=46",
+    "06b49f3673daa80e1a2452f6478c177652dd9b9a5730be557aa9dd6dda347152",
+    []
   )
 );
 
