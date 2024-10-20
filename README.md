@@ -15,9 +15,9 @@ npm install
 
 ### Start a local devnet for testing and development
 
-```
-cd docker && docker compose up
-```
+Follow the instructions on the [Alephium Devnet Docker Guide](https://github.com/alephium/alephium-stack?tab=readme-ov-file#devnet) to start a local devnet.
+
+For other options, see the [Alephium Devnet Guide](https://docs.alephium.org/full-node/getting-started#devnet).
 
 ### Deploy the token faucet contract
 

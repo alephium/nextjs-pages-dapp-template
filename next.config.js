@@ -5,6 +5,7 @@ const nextConfig = {
     if (!isServer) {
       config.resolve.fallback.fs = false
     }
+    config.externals.push('pino-pretty', 'encoding')
     return config
   }
 }
