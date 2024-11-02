@@ -1,4 +1,4 @@
-# My Next.js dApp with app router
+# My Next.js dApp with pages router
 
 This template monorepo was designed to provide a developer-friendly experience to Alephium ecosystem newcomers. It is split into 2 parts:
 

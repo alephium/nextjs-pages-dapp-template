@@ -4,7 +4,7 @@ import { node } from "@alephium/web3"
 
 interface TxStatusAlertProps {
   txId: string
-  txStatusCallback(status: node.TxStatus, numberOfChecks: number): Promise<any>
+  txStatusCallback(status: node.TxStatus, numberOfChecks: number): Promise<unknown>
 }
 
 export const TxStatus = ({ txId, txStatusCallback }: TxStatusAlertProps) => {
